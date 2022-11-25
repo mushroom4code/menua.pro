@@ -1,0 +1,32 @@
+table {
+	border-collapse: collapse;
+	color: black;
+	margin: 15px 5px;
+}
+
+thead {
+
+}
+thead th {
+	padding: 3px 10px;
+	font-weight: normal;
+	border-bottom: 4px double silver;
+	border-right: 4px double silver;
+}
+
+thead th:last-child {
+	border-right: none;
+}
+
+.R {
+	text-align: right;
+}
+
+.BCmult {
+	position: absolute;
+	left: -8px;
+	bottom: 0px;
+	z-index: 2;
+	font-size: 0.7em;
+	color: black;
+}
