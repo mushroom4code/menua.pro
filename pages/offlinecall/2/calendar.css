@@ -1,0 +1,66 @@
+.calendar01{
+	border-top: 1px solid gray;
+	border-left: 1px solid gray;
+
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto auto;
+	background-color: white;
+	/*padding: 10px;*/
+	overflow: hidden;
+	margin: 10px auto;
+}
+
+.calendar01emptyCell {
+	width: 40px;
+	height: 40px;
+	border-right: 1px solid silver;
+	border-bottom: 1px solid silver;
+}
+
+.calendar01dateCell {
+	cursor: pointer;
+	color: gray;
+	width: 40px;
+	height: 40px;
+	border-right: 1px solid silver;
+	border-bottom: 1px solid silver;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.calendar01dateCell:hover {
+	background-color: hsla(200,50%,90%,0.5);
+}
+
+
+.calendar01dateInnerCellnotEmpty {
+	background-color: hsla(0,0%,100%,0.8);
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+.calendar01dateInnerCell{
+	padding: 3px;
+	position: absolute;
+	color: #447;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+}
+
+.duty{
+
+}
+.duty::after{
+	content: '';
+	width: 100%;
+	height: 100%;
+	border: 4px solid hsla(260,50%,50%,0.5);
+	position: absolute;
+	display: block;
+	left: 0px;
+	top: 0px;
+	box-sizing: border-box;
+	z-index: 1000;
+}

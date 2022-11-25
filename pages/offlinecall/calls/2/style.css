@@ -1,0 +1,15 @@
+.lightGrid {
+	border-left: 1px solid silver;
+	border-top:  1px solid silver;
+	background-color: white;
+}
+
+.lightGrid>div:hover div {
+	background-color: hsl(180, 80%, 95%);;
+}
+
+.lightGrid>div>div {
+	padding: 3px;
+	border-right: 1px solid silver;
+	border-bottom:  1px solid silver;
+}
