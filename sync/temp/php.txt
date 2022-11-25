@@ -1,0 +1,36 @@
+sudo apt update
+sudo apt install php8.0 php8.0-{bz2,cgi,common,cli,curl,intl,dev,fpm,gd,imagick,mbstring,mysql,opcache,readline,xml,zip}
+sudo update-alternatives --config php
+
+
+//SOURCE
+mysqldump -u root -p -h localhost warehouse > 0122inf.sql
+mysqldump -u root -p -h localhost vita > 0122vita.sql
+mysqldump -u root -p -h localhost nikol > 0122nikol.sql
+
+yflt;ysqgfhjkm
+
+
+
+
+//DISTANATION
+
+DROP DATABASE IF EXISTS  `warehouse`;
+DROP DATABASE IF EXISTS  `vita`;
+DROP DATABASE IF EXISTS  `nikol`;
+
+копирование базы данных
+CREATE DATABASE `warehouse`;
+CREATE DATABASE `vita`;
+CREATE DATABASE `nikol`;
+
+mysql -u root -p warehouse < 0122inf.sql
+mysql -u root -p vita < 0122vita.sql
+mysql -u root -p nikol < 0122nikol.sql
+
+
+
+yflt;ysqgfhjkm
+https://dev.mysql.com/get/mysql-apt-config_0.8.16-1_all.deb
+
+  

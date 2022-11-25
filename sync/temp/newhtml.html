@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Event Propagation</title>
+		<link href="/css/2/reset.css" rel="stylesheet" type="text/css"/>
+		<link href="/css/2/all.css" rel="stylesheet" type="text/css"/>
+		<link href="/css/2/common.css" rel="stylesheet" type="text/css"/>
+		<style>
+			#t-daddy { border: 1px solid red }
+			#c1 { background-color: pink; }
+		</style>
+
+		<script>
+			function stopEvent(ev) {
+				c2 = document.getElementById("c2");
+				c2.innerHTML = "hello";
+
+				// this ought to keep t-daddy from getting the click.
+				ev.stopPropagation();
+				alert("event propagation halted.");
+			}
+
+			function load() {
+				elem = document.getElementById("tbl1");
+				elem.addEventListener("click", stopEvent, false);
+			}
+		</script>
+		<style>
+
+
+
+		</style>
+	</head>
+
+	<body onload="load();">
+		<i class="far fa-circle"></i>
+		<i class="fas fa-lock-open"></i>
+		<i class="fas fa-lock"></i>
+		<div class="box neutral">
+			<div class="box-body">
+				<div>
+					<span></span>
+				</div>
+			</div>
+		</div>
+
+		<table id="t-daddy" onclick="alert('hi');">
+			<tr id="tbl1">
+				<td id="c1">one</td>
+			</tr>
+			<tr>
+				<td id="c2">two</td>
+			</tr>
+		</table>
+
+	</body>
+</html>

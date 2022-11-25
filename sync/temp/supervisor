@@ -1,0 +1,19 @@
+apt-get install supervisor
+
+
+/etc/supervisor/conf.d/
+
+nano [servicename].conf
+
+[program:finger]
+command=php -q /var/www/html/public/sync/api/finger/serv.php < /dev/null &
+autostart=true
+autorestart=true
+stderr_logfile=/var/www/html/public/sync/api/finger/logs/finger.err.log
+stdout_logfile=/var/www/html/public/sync/api/finger/logs/finger.out.log
+
+supervisorctl reread
+
+supervisorctl update
+
+tail -f /var/www/html/public/sync/api/finger/logs/finger.out.log

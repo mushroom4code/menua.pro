@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+	<head>
+		<title>TODO supply a title</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div>TODO write content</div>
+		<script>
+
+
+			ws = new WebSocket("ws://192.168.128.100:5038/ari/events?app=m111-home&subscribeAll=true&api_key=manager:manager");
+			ws.onopen = function () {
+				console.log('opened');
+			};
+			ws.onmessage = function (e) {
+				console.log('message');
+				try {
+					let socketData = JSON.parse(e.data);
+					console.log('PARSED:', socketData);
+					if (socketData) {
+
+					}
+				} catch (e) {
+				}
+			};
+			ws.onclose = function (e) {
+				console.log('Socket is closed. Reconnect will be attempted in 1 second.', e.reason);
+				setTimeout(function () {
+					connect();
+				}, 5000);
+			};
+			ws.onerror = function (err) {
+				console.log('Socket encountered error: ', err.message, 'Closing socket');
+				setTimeout(function () {
+					ws.close();
+				}, 1000);
+			};
+		</script>
+
+	</body>
+
+</html>

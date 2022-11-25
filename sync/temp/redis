@@ -1,0 +1,8 @@
+apt-get install redis
+
+
+sudo systemctl start redis-server
+
+systemctl enable redis-server
+
+sudo apt install php-redis
