@@ -1,0 +1,18 @@
+.smallBtn {
+	/*border: 1px solid silver;*/
+	color: #aaa;
+	/*width: 20px;*/
+	/*height: 20px;*/
+
+	display: inline-block;
+	border-radius: 50%;
+	margin: 0 6px;
+	cursor: pointer;
+	transition: transform 150ms ease-in;
+}
+
+.smallBtn:hover {
+	color: #0aa;
+	transform: scale(2.2);
+	z-index: 4;
+}
