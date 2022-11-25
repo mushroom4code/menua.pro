@@ -1,0 +1,117 @@
+<style>
+	.divCNtable {
+		display: grid;
+		grid-gap: 0px;
+		align-items: stretch;
+		border-top: 1px solid gray;
+		border-left: 1px solid gray;
+		margin: 20px;
+		font-family: calibri;	
+		background-color: white;
+	}
+
+
+
+	.divCNtable input,.divCNtable select{
+		width: 100%;
+		display: inline;
+		max-width: 100%;
+		border-radius: 1px;
+	}
+
+	.divCNtable>div {
+		border-bottom: 1px solid gray;
+		border-right: 1px solid gray;
+		height: 100%;
+		vertical-align: middle;
+	}
+
+
+	.divCNtable .h {
+		text-align: center;
+		font-weight: bold;
+		padding: 5px 10px;
+		display: flex;
+		align-items: center;
+	}
+	.contents {
+		display: contents;
+	}
+	.contents>div {
+		border-bottom: 1px solid gray;
+		border-right: 1px solid gray;
+		padding: 0px 10px;
+	}
+	.extended {
+		grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+	}
+
+	.collapsed {
+		grid-template-columns: auto auto auto auto auto auto auto auto auto ;
+	}
+	.collapsed>.hide{
+		display: none;
+	}
+
+
+
+</style>	
+
+<div style="display: inline-block; border: 0px solid red;">
+	<div id="divCNtable" class="divCNtable extended">
+		<div class="h" style="grid-row: span 2;							 ">#</div>
+		<div class="h" style="					grid-column: span 5;	">Товар по накладной/чеку</div>
+		<div class="hide h" style="				grid-column: span 2;	">Списание со склада</div>
+		<div class="hide h" style="				grid-column: span 4;	">По номенклатуре</div>
+
+		<div class="h" style="											">НДС</div>
+		<div class="h" style="grid-row: span 2;							">Сумма с учётом НДС</div>
+		<div class="h" style="grid-row: span 2;							"></div>
+
+
+		<div class="h" style="											">Наименование</div>
+		<div class="h" style="											">Штрихкод</div>
+		<div class="h" style="											">Тип</div>
+		<div class="h" style="											">Ед.изм</div>
+		<div class="h" style="											">Кол-во</div>
+
+		<div class="hide h" style="											">Ед.изм</div>
+		<div class="hide h" style="											">Кол-во</div>
+
+
+		<div class="hide h" style="											">Наименование</div>
+		<div class="hide h" style="											"></div>
+		<div class="hide h" style="											">Кол-во</div>
+		<div class="hide h" style="											">Ед.изм</div>
+
+
+
+
+		<div class="h" style="											">Сумма</div>
+
+		<div id="consignmentNoteBody" class="contents"></div>
+
+
+		<div class="C">+</div>
+		<div></div>
+		<div style="white-space: nowrap;"></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div class="hide"><select id=""><option value=""></option></select></div>
+		<div class="hide"><input type="text" id="WHqty" oninput="digon(); newRow.qty=+this.value; calcRest();" placeholder="Кол-во"></div>
+		<div class="hide"><input id="newNomenclatureName" type="text" placeholder="Наименование" oninput="searchNomenclatureByName(this,qs('#searchNomenclatureResults')); newRow.NomenclatureName = this.value.trim();"><div id="searchNomenclatureResults" style="position: absolute; z-index: 10;"></div></div>
+
+		<div class="hide" style="white-space: nowrap;"> в 1 <select id="" disabled style="display: inline; width: auto;"><option value=""></option></select></div>
+		<div class="hide"><input type="text" id="newQty" size="2" oninput="digon(); newRow.qty=+this.value; calcRest();" placeholder="Кол-во"></div>
+		<div class="hide"><select id=""><option value=""></option></select></div>
+
+
+		<!--<div><input type="text" id="newPrice" readonly disabled placeholder="Цена"></div>-->
+		<!--<div><input type="text" id="summExVat" readonly disabled placeholder="Сумма без НДС"></div>-->
+		<!--<div><input type="text" id="newVatPerc" readonly disabled placeholder="ставка, %"></div>-->
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+</div>

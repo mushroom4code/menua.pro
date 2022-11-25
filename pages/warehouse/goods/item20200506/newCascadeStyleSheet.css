@@ -1,0 +1,22 @@
+.redBorder {
+	border: 1px solid red;
+	margin-left: 10px;
+	list-style: none;
+}
+
+.small {
+	font-size: 0.8em;
+}
+
+
+.consStocktaking {
+	color: hsla(0,0%,80%,1);
+}
+
+.consItemOut{
+	color: hsla(0,50%,80%,1);
+}
+
+.consItemIn {
+	color: hsla(120,50%,80%,1);
+}
