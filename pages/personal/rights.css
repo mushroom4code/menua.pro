@@ -1,0 +1,38 @@
+#allRights {
+	border: 1px solid black;
+	display: inline-block;
+	background-color: #777;
+	/*color: black;*/
+	margin: 10px;
+	padding: 5px;
+	box-shadow: 4px 4px 0px 0px hsla(0,0%,0%,0.5);
+	text-align: left;
+}
+
+#allRights ul {
+	list-style: none;
+	margin-left: 20px;
+}
+#allRights li:hover {
+	background-color: hsla(240,100%,40%,0.1);
+}
+
+
+#allRights div {
+	/*border: 1px solid green;*/
+
+}
+#allRights label{
+	/*float: right;*/
+	line-height: 30px;
+	padding-right: 10px;
+	vertical-align: middle;
+}
+
+
+
+
+#allRights div:hover {
+	color: pink;
+}
+

@@ -1,0 +1,45 @@
+table {
+	border-collapse: collapse;
+	color: black;
+	margin: 15px 5px;
+}
+
+thead {
+
+}
+thead th {
+	padding: 3px 10px;
+	font-weight: normal;
+	border-bottom: 4px double silver;
+	border-right: 4px double silver;
+}
+
+thead th:last-child {
+	border-right: none;
+}
+
+.R {
+	text-align: right;
+}
+
+.btn {
+	cursor: pointer;
+	color: #fefe54;
+}
+
+.btn:hover {
+	background-color: #a50;
+}
+
+.addItemsTable {
+	color: black; margin-top: 15px; text-align: left;white-space: nowrap;
+}
+
+
+
+
+
+
+.title {
+	margin: 10px;
+}

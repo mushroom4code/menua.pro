@@ -1,0 +1,173 @@
+.H>div {
+	display: none;
+	z-index: 2;
+	width: max-content;
+	right: 110%;
+	bottom: 110%;
+	position: absolute;
+	border: 1px solid silver;
+	background-color: white;
+	border-radius: 10px;
+	padding: 5px;
+	box-shadow: 3px 3px 10px hsla(0,0%,0%,0.3);
+}
+
+.H:hover>div{
+	display: block;
+
+}
+
+.H00 {
+
+}
+.H11 {
+
+}
+
+.HNA::before {
+	background-color: hsl(0,100%,80%);
+	content: 'НД';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.HSD::before {
+	background-color: hsl(0,100%,80%);
+	content: 'Б';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.HV::before {
+	background-color: hsl(0,100%,80%);
+	content: 'ОТ';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+.H11::before {
+	background-color: hsl(120,100%,80%);
+	content: '1';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+.H10 {
+
+}
+
+.H10::before {
+	background-color: hsl(180,100%,80%);
+	content: '0.5';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50%;
+	font-weight: bold;
+	font-size: 0.6em;
+	border-bottom: 1px solid gray;
+	box-sizing: border-box;
+}
+.H01{
+
+}
+
+.H01::before {
+	background-color: hsl(40,100%,80%);
+	content: '0.5';
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	width: 100%;
+	height: 50%;
+	font-weight: bold;
+	font-size: 0.6em;
+	border-top: 1px solid gray;
+	box-sizing: border-box;
+}
+tbody tr:hover td {
+	background-color: hsl(60,100%,90%);
+}
+
+.dayCell {
+	width: 30px;
+	border-bottom: 1px solid gray;
+	border-right: 1px solid gray;
+}
+.duty{
+
+}
+.duty::after{
+	content: '';
+	width: 100%;
+	height: 100%;
+	border: 4px solid hsla(260,50%,50%,0.5);
+	position: absolute;
+	display: block;
+	left: 0px;
+	top: 0px;
+	box-sizing: border-box;
+	z-index: 1000;
+}
+
+
+.schtt{
+	position: relative;
+}
+.schtt:after {
+	display: flex;
+	visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 200ms linear 750ms;
+	content:  attr(data-day);
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2em;
+	/*line-height: 2em;*/
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	z-index: 10;
+	top: -60px;
+	left: -60px;
+	background: hsla(0,0%,100%,1);
+	border: 1px solid silver;
+	padding: 5px;
+	border-radius: 50%;
+}
+.schtt:hover:after{
+	visibility: visible;
+	opacity: 1;
+
+
+}
