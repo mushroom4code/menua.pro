@@ -1,0 +1,24 @@
+.highlighted {
+	background-color: lightgreen;
+}
+.highlightedRed {
+	background-color: pink;
+}
+.unavaileble {
+	/*border: 1px solid red;*/
+	font-size: 0.4em;
+	line-height: 10px;
+	color: gray;
+	
+}
+.availeble {
+	/*border: 1px solid green;*/
+	background-color: lightgreen;
+	font-size: 2em;
+}
+a:visited {
+	display: block;
+	background-color: darkred;
+	color: red;
+	font-weight: bold;
+}
