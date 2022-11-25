@@ -1,0 +1,313 @@
+/*@import url("reset.css");*/
+@import url('https://fonts.googleapis.com/css?family=Marmelad&display=swap');
+
+@font-face {
+
+}
+
+* {
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+html {
+	min-height: 100%;
+}
+body {
+	background-image: url("/css/images/bg2.jpg");
+	font-family: 'Marmelad', sans-serif;
+	font-size: 20px !important;
+	line-height: 26px !important;
+	background-size:  cover;
+	background-attachment:  fixed;
+	min-height: 100%;
+	cursor: default;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	color: red;
+}
+
+
+li {
+	display: block;
+	list-style: none;
+}
+
+.maingrid {
+	display: grid;
+	grid-template-columns: 200px auto;
+	max-width: 1000px;
+	min-width: 800px;
+	margin: 0 auto;
+}
+
+.menu {
+	background-color: hsla(0,0%,100%,0.3);
+	padding: 5px;
+	border-radius: 7px;
+	display: block;
+	width: auto;
+	box-shadow: 2px 2px 8px hsla(0,0%,30%,0.3);
+}
+
+.menu>li>a {
+	cursor: pointer;
+}
+.menu>li>a:hover {
+
+}
+
+.menu > .active > a,
+.menu > .active > a:hover,
+.menu > .active > a:focus {
+
+}
+
+.divider {
+	height: 1px;
+	margin: 9px 1px;
+	overflow: hidden;
+	background-color: #eee;
+	border-bottom: 1px solid #fff;
+}
+
+
+.box {
+	margin: 20px;
+	background-color: hsla(0,0%,100%,0.6);
+	box-shadow: 2px 2px 15px hsla(0,0%,30%,0.3);
+	border-radius: 5px;
+}
+
+
+
+.box h2 {
+	margin: 9px 1px;
+	text-align: center;
+	border-bottom: 2px solid white;
+	padding: 15px;
+}
+
+
+.box .box-body {
+	padding: 10px;
+	/*border: 1px solid red;*/
+}
+
+
+
+
+.horisontalMenu {
+
+}
+
+.horisontalMenu li {
+	display: inline-block;
+	background-color: hsla(0,0%,100%,0.6);
+	box-shadow: 2px 2px 4px hsla(0,0%,30%,0.3);
+	border-radius: 5px;
+	margin: 2px 10px;
+}
+.horisontalMenu li a {
+	padding: 3px 15px;
+}
+.horisontalMenu li:hover {
+	background-color: hsla(0,0%,100%,1);
+	box-shadow: 2px 2px 4px hsla(0,0%,30%,0.7);
+}
+.horisontalMenu li a:active {
+
+}
+
+input[type='text'],input[type='password'], input[type='date'] {
+
+}
+
+select  {
+
+}
+
+
+input[type='submit'] {
+	cursor: pointer;
+}
+input[type='submit']:hover {
+
+}
+
+input[type='submit']:active {
+
+}
+
+
+
+
+input[type='button'], button {
+	cursor: pointer;
+	display: inline-block;
+	background-color: hsla(0,0%,100%,0.6);
+	box-shadow: 2px 2px 4px hsla(0,0%,30%,0.3);
+	border-radius: 5px;
+	margin: 2px 10px;
+	padding: 3px 15px;
+}
+
+input[type='button']:before, button:before {
+
+}
+input[type='button']:after, button:after {
+
+}
+
+
+input[type='button']:hover,button:hover {
+	background-color: hsla(0,0%,100%,1);
+	box-shadow: 2px 2px 4px hsla(0,0%,30%,0.7);
+}
+
+input[type='button']:active, button:active {
+
+}
+
+
+td {
+
+}
+
+
+
+
+.modal {
+	margin: 20px;
+	background-color: hsla(0,0%,100%,0.9);
+	box-shadow: 2px 2px 15px 10px hsla(0,0%,30%,0.3);
+	border-radius: 5px;
+	backdrop-filter: blur(2px);
+	text-align: center;
+	position: fixed;
+	left: 50%;
+	top: 100px;
+	transform: translateX(-50%);
+	/*width: 500px;*/
+	height: auto;
+	padding: 20px;
+	z-index: 3;
+
+
+
+}
+
+.error {
+	background: rgb(255,0,0);
+	background: linear-gradient(50deg, hsla(0,100%,70%,0.7) 0%, hsla(0,100%,80%,0.7) 32%, hsla(0,100%,70%,0.7) 100%);
+}
+
+.success {
+
+}
+
+.neutral {
+
+}
+.white {
+
+}
+
+.white .box-body {
+
+}
+
+
+
+.modal h2 {
+
+}
+
+.white h2 {
+
+}
+
+
+.modal .box-body {
+
+}
+
+
+
+input[type='radio'],input[type='checkbox'] {
+
+}
+
+label {
+
+}
+
+label:hover{
+
+}
+
+label:active{
+
+}
+
+input[type='radio']+label:before,input[type='checkbox']+label:before {
+
+}
+
+input[type='radio']:checked+label:before,input[type='checkbox']:checked+label:before {
+
+}
+
+
+.console {
+
+}
+
+.personalUserpic {
+
+}
+
+
+.C {
+	text-align: center;
+}
+
+
+
+.addItemsTable {
+
+}
+
+
+
+.btmdash {
+
+}
+
+
+.btn {
+	cursor: pointer;
+
+}
+
+.btn:hover {
+
+}
+
+.btmdashTable>tr>td {
+
+}
+
+.btmdashTable>tr:last-child>td{
+
+}

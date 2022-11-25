@@ -1,0 +1,112 @@
+@media screen and (max-width: 1050px) {
+
+	html, body {
+		max-width: 100%;
+		/*overflow: hidden;*/
+	}
+	.maingrid {
+		/*border: 2px solid red;*/
+		display: grid;
+		grid-template-columns: auto;
+		max-width: 100%;
+		min-width: 0px;
+		margin: 0 auto;
+
+	}
+	.menuWrapper {
+		margin: 0px;
+		max-width: 100%;
+	}
+	.menu {
+		display: inline-block;
+		padding: 5px 5px;
+		border: 2px solid #000;
+		box-shadow: 0 0 0 3px, 4px 4px 0 4px black;
+		list-style: none;
+		background: #bbb;
+		max-width: 100%;
+	}
+	.box {
+		margin: 20px auto;
+		display: block;
+		padding: 5px;
+		background-color: #0aa;
+		color: white;
+		box-shadow: 2px 2px 0px #333;
+	}
+
+	.box .box-body {
+		border: 1px solid white;
+		padding: 20px 2px;
+	}
+
+	.neutral {
+		background-color: #f5f8f9;
+		color: #000;
+	}
+	.btmdashTable {
+		width: 100%;
+		font-size: 1.2em;
+	}
+
+	#personalInfo {
+		font-size: 1.5em;
+		line-height: 1.3em;
+		text-align: center;
+	}
+
+	.addItemsTable {
+		display: grid;
+		grid-template-columns: auto;
+		color: white; 
+		margin: 15px auto; 
+		text-align: left;
+		white-space: normal;
+		font-size: 1.3em;
+		line-height: 1.5em;
+		width: 90%;
+	}
+
+	.addItemsTable>div {
+		display: contents;
+	}
+	.addItemsTable>div>div {
+		padding: 3px;
+	}
+
+	.addItemsTable .caption{
+		margin-top: 0.7em;
+		font-size: 0.7em;
+		line-height: 0.7em;
+		color: #333;
+		padding: 0px;
+	}	
+	.hide{
+		display: none;
+	}
+	.modal {
+		width: 90%;
+	}
+	.modal .box-body {
+		padding: 20px 10px;
+		min-width: 200px;
+	}
+
+	input[type="text"], input[type="password"], input[type="date"], input[type="number"], .inputText {
+		height: auto;
+	}
+
+	.personalInfoTable {
+		grid-template-columns: auto;
+	}
+	.sm08em {
+		font-size: 0.8em;
+	}
+
+
+}
+@media screen and (max-width: 1050px) {
+	#fingerBlock{
+		display: none;
+	}
+}
