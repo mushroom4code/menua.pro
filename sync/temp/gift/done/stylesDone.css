@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+body {
+    margin: 0;
+}
+
+
+.Massage {
+    position: absolute;
+    width: 1050px;
+    height: 226px;
+    left: 435px;
+    top: 384px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 140.9%;
+
+    text-align: center;
+    text-transform: uppercase;
+    color: #1A4496;
+}
+
+
+.end {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 23px 75px;
+    gap: 10px;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    width: 418px;
+    height: 102px;
+    left: 751px;
+    top: 675px;
+
+    background: linear-gradient(82.71deg, #B6325F 33.85%, #FF887C 87.88%);
+    border-radius: 60px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 140.9%;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+
+
+.end:hover {
+    animation: bounce 1s;
+}
+
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    60%,
+    100% {
+        transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+
+    80% {
+        transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+}

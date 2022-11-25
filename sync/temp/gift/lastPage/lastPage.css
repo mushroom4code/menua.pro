@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+body {
+    margin: 0;
+}
+
+
+.lastMassage {
+    position: absolute;
+    width: 698px;
+    height: 186px;
+    left: 611px;
+    top: 176px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 66px;
+    line-height: 140.9%;
+
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #1A4496;
+}
+
+
+.bigLogo__infinity {
+    position: absolute;
+    width: 1039px;
+    height: 254px;
+    left: 441px;
+    top: 470px;
+}
+
+
+.UltralastMassage {
+
+    position: absolute;
+    width: 953px;
+    height: 73px;
+    left: 484px;
+    top: 832px;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 51px;
+    line-height: 140.9%;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #1A4496;
+}

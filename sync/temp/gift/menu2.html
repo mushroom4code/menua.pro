@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity</title>
+    <link rel="stylesheet" href="menu2/stylesMenu2.css">
+</head>
+
+
+<body>
+    <div class="container" style="flex-direction: column;">
+
+        <div class="">
+
+            <a href="#" class="background">
+                <img src="css/img/fon.png" alt="">
+            </a>
+
+        </div>
+
+
+
+        <header>
+            <div class="header" style="display: block; text-align:center;">
+
+                <a href="#" class="logo__infinity">
+                    <img src="css/img/logo1.png" alt="лого">
+
+                </a>
+
+                <div class="logo__giftFor" style="display: block; text-align:center;">
+
+                    <a href="#" class="">
+                        <img src="css/img/gift.png" alt="лого">
+
+                    </a>
+                    <div class="logo__freeDoctor" style="display: block; text-align:center;">
+
+                        <a href="#" class="">
+                            <img src="css/img/textPage2.png" alt="лого">
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+
+        </header>
+
+
+
+
+
+        <div>
+            <form method="GET" action="userForm.html" style="display: block; text-align: center; ">
+                <div class="menu" style=" text-align: center;">
+                    <div style="display: inline-block;">
+                        <div style=" display: grid; grid-template-columns: repeat(3,auto); border: 0px solid red; grid-gap: 10px; padding: 10px;">
+
+
+
+                            <div><input type="radio" name="gift" value="узи органов малого
+                                таза" id="el1" data-checked="0"><label class="cblabel" for="el1">узи органов малого таза</label></div>
+
+                            <div><input type="radio" name="gift" value="узи сосудов
+                                шеи" id="el2" data-checked="0"><label class="cblabel" for="el2">узи сосудов шеи</label>
+                            </div>
+
+                            <div><input type="radio" name="gift" value="узи
+                                суставов" id="el3" data-checked="0"><label class="cblabel" for="el3">узи суставов</label>
+                            </div>
+
+                            <div><input type="radio" name="gift" value="узи вен нижних конечностей" id="el4" data-checked="0"><label class="cblabel"
+                                    for="el4">узи вен нижних конечностей</label></div>
+
+                            <div><input type="radio" name="gift" value="узч зубов" id="el5" data-checked="0"><label class="cblabel" for="el5">узч
+                                    зубов</label>
+                            </div>
+
+                            <div><input type="radio" name="gift" value="узч лица" id="el6" data-checked="0"><label class="cblabel" for="el6">узч
+                                    лица</label>
+                            </div>
+
+                            <div><input type="radio" name="gift" value="фторирование зубов" id="el7" data-checked="0"><label class="cblabel"
+                                    for="el7">фторирование зубов</label></div>
+
+                            <div><input type="radio" name="gift" value="кт зубов" id="el8" data-checked="0"><label class="cblabel" for="el8">кт
+                                    зубов</label>
+                            </div>
+
+                            <div><input type="radio" name="gift" value="карбокситерапия" id="el9" data-checked="0"><label class="cblabel"
+                                    for="el9">карбокситерапия</label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+
+            <div class="buttons" style=" text-align: center; justify-content: center;">
+
+
+                <div>
+
+                    <a href="main.html" class="more" style="  display: inline-block; text-align: center; justify-content: center;
+                        border-radius: 60px;
+                        border: 0;
+                        width: 320px;
+                        height: 102px;
+                        padding: 13px, 25px, 13px, 37px;
+                        font-size: 35px;">Назад</a>
+
+                </div>
+
+
+                <div>
+
+                 <a href="menu.html" class="more" style=" display: inline-block; text-align: center; justify-content: center;
+                            border-radius: 60px;
+                            border: 0;
+                            width: 320px;
+                            height: 102px;
+                            padding: 13px, 25px, 13px, 37px;
+                            font-size: 35px;">Еще подарки</a>
+
+                </div>
+
+                <div>
+
+                    <button class="buy" type="submit" onclick="sendgift();">Отправить
+                        подарок</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+</body>
+
+
+<script>
+    function sendgift() {
+        let value = (document.querySelector('input[name="gift"]:checked') || {}).value;
+        console.log(value);
+        if (!value) {
+            alert('А подарок, блять?');
+            void (0);
+            return false;
+
+        }
+        return true;
+    }
+</script>
+</html>

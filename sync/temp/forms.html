@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<script src="/sync/js/basicFunctions.js" type="text/javascript"></script>
+<script src="/sync/3rdparty/vue.min.js" type="text/javascript"></script>
+<html>
+	<head>
+		<title>Генератор форм</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			button {
+				cursor: pointer;
+				border-radius: 5px;
+				border: 1px solid gray;
+				margin: 5px;
+			}
+			input[type=text]{
+				width: 500px;
+			} 
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<form id="theform" oninput="formRender()">
+				<div v-for="field,fieldindex in form.fields" style="border: 1px solid silver; background-color: #FAFAFA; padding: 10px; display: grid; grid-template-columns:20px 1fr 50px; margin: 10px;">
+					<div style="display: flex">{{fieldindex+1}}</div>
+					<div style="display: flex; align-content: flex-start;">
+						<div><input type="text" v-model="field.name" style="margin: 10px; width:300px; border: none; border-bottom: 1px solid black;"><input type="checkbox" v-model="field.required"></div>
+						<input :name="field.name" v-if="field.type=='text'" type="text" placeholder="Маленький текст">
+						<input :name="field.name" v-if="field.type=='date'" type="date">
+						<textarea :name="field.name" v-if="field.type=='textarea'" placeholder="Большой текст"></textarea>
+						<div v-if="field.type=='radio'">
+							<div v-for="option,index of field.options" style="padding: 5px;"><input type="radio"  :name="field.name" :value="field.options[index]"><input type="text" v-model="field.options[index]"><button type="button" @click="removeOption(field.options,index)" style=" background-color: pink;">-</button></div>
+							<button type="button" @click="pushOption(field)"   style=" background-color: lightgreen;" >Добавить вариант</button>
+						</div>
+						<div v-if="field.type=='checkbox'">
+							<div v-for="option,index of field.options" style="padding: 5px;"><input type="checkbox" :name="field.name+'['+index+']'" :value="field.options[index]"><input type="text" v-model="field.options[index]"><button type="button" @click="removeOption(field.options,index)" style="background-color: pink;">-</button></div>
+							<button type="button" @click="pushOption(field)"  style=" background-color: lightgreen;" >Добавить вариант</button>
+						</div>	
+					</div>
+					<div>
+						<button type="button" @click="removeField(fieldindex)" style=" background-color: pink;"> - </button>
+					</div>
+				</div>
+			</form>
+			<div style="padding: 20px;">
+				<table>
+					<tr>
+						<th>Название поля</th>
+						<th>Тип поля</th>
+						<th>Обязательно</th>
+						<th></th>
+					</tr>
+					<tr>
+						<td>
+							<input type="text"  v-model="newFieldName" style=" width:300px;">
+						</td>
+						<td>
+							<select v-model="newFieldType">
+								<option value="text">Маленький текст</option>
+								<option value="textarea">Большой текст</option>
+								<option value="radio">Выбор (только одно)</option>
+								<option value="checkbox">Выбор (можно несколько)</option>
+								<option value="date">Дата</option>
+							</select>
+						</td>
+						<td style="text-align:  center;">
+							<input type="checkbox" v-model="newFieldRequired" >
+						</td>
+						<td>
+							<button type="button" @click="add">добавить</button></td>
+					</tr>
+				</table>
+			</div>
+
+			<table>
+				<tr>
+					<th>Код формы</th>
+					<th>Данные формы</th>
+				</tr>
+				<tr>
+					<th><textarea id="json" v-model="appRender" style="height: 400px; width: 400px;"></textarea></th>
+					<th><textarea id="formRender" style="height: 400px; width: 400px;"></textarea></th>
+				</tr>
+			</table>
+			<div @click="trim">TRIM</div>
+
+		</div>
+		<script>
+function formRender() {
+	document.querySelector(`#formRender`).value = JSON.stringify(serializeFormData(new FormData(document.querySelector(`#theform`))), null, 4);
+}
+var app = new Vue({
+	el: '#app',
+	data: {
+		newFieldType: '',
+		newFieldName: '',
+		newFieldRequired: false,
+		form: {
+			fields: []
+		}
+	},
+	watch: {},
+	computed: {
+
+		appRender: {
+			get: function () {
+				return JSON.stringify(this.form, null, 2);
+			}
+			,
+			set: function (newValue) {
+				let data = JSON.parse(newValue);
+				this.form = data;
+			}
+
+
+		}
+
+
+	},
+	methods: {
+		trim: function () {
+			this.form.fields.forEach(element => {
+				element.name = element.name.trim();
+				if (element.options) {
+					element.options.forEach(function (option, index) {
+						element.options[index] = option.trim();
+					});
+				}
+
+			});
+		},
+		add: function () {
+
+			let obj = {
+				type: this.newFieldType,
+				name: this.newFieldName,
+				required: this.newFieldRequired
+			};
+			if (['radio', 'checkbox'].indexOf(this.newFieldType) > -1) {
+				obj.options = [];
+			}
+			this.form.fields.push(obj);
+		},
+		pushOption: function (field) {
+			field.options.push("");
+		},
+		removeOption: function (options, index) {
+			options.splice(index, 1);
+		}
+		,
+		removeField: function (index) {
+			this.fields.splice(index, 1);
+		}
+
+
+	},
+	mounted: function () {
+	}
+});
+		</script>
+	</body>
+</html>

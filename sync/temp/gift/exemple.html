@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	 <meta charset="UTF-8">
+	 <title></title>
+	 <style>
+		body {
+		  background-color: #e0e0f0;
+		}
+		
+		input[type='radio'] {
+		  appearance: none;
+		  --moz-appearance: none;
+		  width: 0xp;
+		  height: 0px;
+		  opacity: 0;
+		  position: absolute;
+		}
+		.cblabel {
+		  box-sizing: border-box;
+		  border: 2px solid white;
+		  border-radius: 22px;
+		  padding: 10px 20px;
+		  background-color: #F7F7F7;
+		  width: 404px;
+		  height: 142px;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  letter-spacing: 0.1em;
+		  font-size: 32px;
+		  font-family: Arial;
+		  font-weight: bold;
+		  text-transform:  uppercase;
+		  text-align: center;
+		  cursor: pointer;
+		}
+		.cblabel:hover {
+		  background-color: white;
+		}
+		input[type='radio']:checked+label{
+		  background-color: pink;
+
+		}
+
+	 </style>
+  </head>
+  <body>
+	 <form method="GET" action="?">
+		<div style=" text-align: center;">
+		  <div style="display: inline-block;">
+			 <div style=" display: grid; grid-template-columns: repeat(3,auto); border: 0px solid red; grid-gap: 10px; padding: 10px;">
+
+				<? for ($n = 1; $n <= 9; $n++) {
+				  ?>
+  				<div><input type="radio" name="gift" value="<?= $n; ?>"  id="g<?= $n; ?>" data-checked="0"><label class="cblabel" for="g<?= $n; ?>">Узи сосудов шеи2 </label></div>
+				  <? }
+				  ?>
+			 </div>
+		  </div>
+		</div> 
+		<button>Ещё подарки</button>
+		<button type="submit">Отправить подарок</button>
+	 </form>
+  </body>
+
+
+  <script>
+	 function sendgift() {
+		console.log(document.forms[0].gift.value);
+
+	 }
+  </script>
+</html>
